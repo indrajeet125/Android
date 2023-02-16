@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">displayMarks</string>
+    <string name="heading">enter marks</string>
+    <string name="sub1hint">enter subject 1</string>
+    <string name="sub2_hint">sub 2</string>
+    <string name="sub3_hint">sub 3</string>
+    <string name="show_your_result">show your result</string>
+</resources>

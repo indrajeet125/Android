@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">LoginRegistration</string>
+    <string name="_24_7_healthcare">24*7 HealthCare</string>
+    <string name="login_page">Login page</string>
+    <string name="enter_user_name_hint">Enter user name</string>
+    <string name="enter_password_hint">Enter password</string>
+    <string name="register_for_new_user">Register for new user</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="registration">Registration</string>
+    <string name="exist_message">Already have an account</string>
+    <string name="enter_email_hint">Enter email</string>
+</resources>
