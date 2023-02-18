@@ -1,4 +1,6 @@
-package com.example.uploadimage;
+package com.example.firebaseimageupload;
+
+
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -22,7 +24,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     final private int GALLEY_REQ_CODE = 1000;
     final private int CAMERA_REQ_CODE = 1001;
 
-//ye camera aur gallary wala h bss
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
