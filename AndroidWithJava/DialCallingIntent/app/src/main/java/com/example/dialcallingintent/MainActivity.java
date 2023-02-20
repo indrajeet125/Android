@@ -1,12 +1,15 @@
 package com.example.dialcallingintent;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -18,9 +21,15 @@ public class MainActivity extends AppCompatActivity {
 
     public void onCall(View view) {
         System.out.println("call button clicked --------------n\n\n\n");
-//        EditText dial=findViewById(R.id.number);
-//        String number= (dial.getText()).toString();
-        Intent intent = new Intent(Intent.ACTION_DIAL, Uri.parse("tel" + "5673543534"));
+        EditText dial = findViewById(R.id.number);
+        String number = (dial.getText()).toString();
+        if (number.length() < 5) {
+            Toast.makeText(this, "Enter the correct Number", Toast.LENGTH_SHORT).show();
+            return;
+        }
+        Intent intent = new Intent(Intent.ACTION_DIAL);
+        intent.setData(Uri.parse("tel:"+number));
+        dial.setText("");
         startActivity(intent);
 
 
@@ -29,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
     public void onDial(View view) {
 
         Intent intent = new Intent(Intent.ACTION_DIAL);
+
         startActivity(intent);
 
     }
