@@ -18,21 +18,17 @@ public class MainActivity extends AppCompatActivity {
 
     public void onCall(View view) {
         System.out.println("call button clicked --------------n\n\n\n");
-        EditText dial=findViewById(R.id.number);
-        String number= (dial.getText()).toString();
-        Intent intent =new Intent(Intent.ACTION_DIAL,  Uri.parse("tel" + "5673543534"));
+//        EditText dial=findViewById(R.id.number);
+//        String number= (dial.getText()).toString();
+        Intent intent = new Intent(Intent.ACTION_DIAL, Uri.parse("tel" + "5673543534"));
         startActivity(intent);
 
 
-
-//        Intent callIntent = new Intent(Intent.ACTION_CALL);
-//        callIntent.setData(Uri.parse("tel:"+number));
-//        startActivity(callIntent);
     }
 
     public void onDial(View view) {
 
-        Intent intent =new Intent(Intent.ACTION_DIAL);
+        Intent intent = new Intent(Intent.ACTION_DIAL);
         startActivity(intent);
 
     }
