@@ -23,11 +23,11 @@ public class MainActivity extends AppCompatActivity {
         System.out.println("call button clicked --------------n\n\n\n");
         EditText dial = findViewById(R.id.number);
         String number = (dial.getText()).toString();
-        if (number.length() < 5) {
-            Toast.makeText(this, "Enter the correct Number", Toast.LENGTH_SHORT).show();
+        if (number.length() != 10) {
+            Toast.makeText(this, "Enter the correct Number  10 digit ", Toast.LENGTH_SHORT).show();
             return;
         }
-        Intent intent = new Intent(Intent.ACTION_DIAL);
+        Intent intent = new Intent(Intent.ACTION_CALL);
         intent.setData(Uri.parse("tel:"+number));
         dial.setText("");
         startActivity(intent);
