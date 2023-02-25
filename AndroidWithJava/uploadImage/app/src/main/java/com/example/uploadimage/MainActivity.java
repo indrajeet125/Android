@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     final private int GALLEY_REQ_CODE = 1000;
     final private int CAMERA_REQ_CODE = 1001;
 
-//ye camera aur gallary wala h bss
+//ye camera aur gallary wala h bss no firebase
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

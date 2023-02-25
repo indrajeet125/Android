@@ -19,7 +19,7 @@ public class B extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view=inflater.inflate(R.layout.fragment_b, container, false);
-        TextView textView=view.findViewById(R.id.txtfrag);
-        return textView;
+        TextView textView=view.findViewById(R.id.txtfragB);
+        return view;
     }
 }

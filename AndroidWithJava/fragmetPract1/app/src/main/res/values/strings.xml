@@ -1,5 +1,9 @@
 <resources>
     <string name="app_name">fragmetPract1</string>
     <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragmentA">Hello blank fragmentA </string>
+    <string name="hello_blank_fragmentB">Hello blank fragmentB </string>
+    <string name="hello_blank_fragmentC">Hello blank fragmentC </string>
+    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

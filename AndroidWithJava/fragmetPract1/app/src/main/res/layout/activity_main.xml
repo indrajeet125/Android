@@ -4,18 +4,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
+
     <fragment
-        android:id="@+id/frag1"
+        android:id="@+id/fragA"
         android:name="com.example.fragmetpract1.A"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_weight="1" />
 
     <fragment
-        android:id="@+id/frag2"
-        android:name="com.example.fragmetpract1.A"
+        android:id="@+id/fragB"
+        android:name="com.example.fragmetpract1.B"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" />
+    <fragment
+        android:id="@+id/fragC"
+        android:name="com.example.fragmetpract1.C"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="1" />
