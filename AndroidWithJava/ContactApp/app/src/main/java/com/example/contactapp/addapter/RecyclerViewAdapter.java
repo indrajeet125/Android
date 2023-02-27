@@ -69,14 +69,16 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             phonenuber = itemView.findViewById(R.id.phone);
             iconbutton = itemView.findViewById(R.id.image);
 
-            iconbutton.setOnClickListener(this);
+//            iconbutton.setOnClickListener(this);
 
         }
 
         @Override
         public void onClick(View v) {
+
             int possion = this.getAdapterPosition();
             Contact contact = contactList.get(possion);
+
             String name = contact.getName();
             String phone = contact.getPhoneNumber();
 
@@ -84,6 +86,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             intent.putExtra("name",name);
             intent.putExtra("phone",phone);
             context.startActivities(new Intent[]{intent});
+
         }
     }
 }

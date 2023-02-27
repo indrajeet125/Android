@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".AddStudent">
+
+
+    <TextView
+        android:id="@+id/idh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ScholerId: "
+        android:textSize="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/nameh"
+        app:layout_constraintEnd_toStartOf="@+id/idl"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <TextView
+        android:id="@+id/idl"
+        android:layout_width="wrap_content"
+
+        android:layout_height="wrap_content"
+        android:text="idl"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/namel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/idh"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <TextView
+        android:id="@+id/nameh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name: "
+        android:textSize="30dp"
+
+        app:layout_constraintBottom_toTopOf="@+id/genderh"
+        app:layout_constraintEnd_toStartOf="@+id/namel"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/idh"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <TextView
+        android:id="@+id/namel"
+        android:layout_width="wrap_content"
+
+        android:layout_height="wrap_content"
+        android:text="namel"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/genderl"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/nameh"
+        app:layout_constraintTop_toBottomOf="@+id/idl"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <TextView
+        android:id="@+id/genderh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gender:"
+        android:textSize="30dp"
+
+        app:layout_constraintBottom_toTopOf="@+id/mobileh"
+        app:layout_constraintEnd_toStartOf="@+id/genderl"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nameh"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <TextView
+        android:id="@+id/genderl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="genderh"
+        android:textSize="30dp"
+
+        app:layout_constraintBottom_toTopOf="@+id/mobilel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/genderh"
+        app:layout_constraintTop_toBottomOf="@+id/namel"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <TextView
+        android:id="@+id/mobileh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MobileNo:"
+        android:textSize="30dp"
+
+        app:layout_constraintBottom_toTopOf="@+id/emailh"
+        app:layout_constraintEnd_toStartOf="@+id/mobilel"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/genderh"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <TextView
+        android:id="@+id/mobilel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="mobileh"
+        android:textSize="30dp"
+
+        app:layout_constraintBottom_toTopOf="@+id/emaill"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/mobileh"
+        app:layout_constraintTop_toBottomOf="@+id/genderl"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <TextView
+        android:id="@+id/emailh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Email: "
+        android:textSize="30dp"
+
+        app:layout_constraintBottom_toTopOf="@+id/districth"
+        app:layout_constraintEnd_toStartOf="@+id/emaill"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mobileh"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <TextView
+        android:id="@+id/emaill"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="emaill"
+        android:textSize="30dp"
+
+        app:layout_constraintBottom_toTopOf="@+id/districtl"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/emailh"
+        app:layout_constraintTop_toBottomOf="@+id/mobilel"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <TextView
+        android:id="@+id/districth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="District: "
+        android:textSize="30dp"
+
+        app:layout_constraintBottom_toTopOf="@+id/stateH"
+        app:layout_constraintEnd_toStartOf="@+id/districtl"
+        app:layout_constraintHorizontal_bias="0.538"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/emailh"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <TextView
+        android:id="@+id/districtl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="districtl"
+        android:textSize="30dp"
+
+        app:layout_constraintBottom_toTopOf="@+id/statel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/districth"
+        app:layout_constraintTop_toBottomOf="@+id/emaill"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <TextView
+        android:id="@+id/stateH"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="State: "
+        android:textSize="30dp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/statel"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/districth"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <TextView
+        android:id="@+id/statel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="statel"
+        android:textSize="30dp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/stateH"
+        app:layout_constraintTop_toBottomOf="@+id/districtl"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <TextView
+        android:id="@+id/ContactInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Contact details: "
+        app:layout_constraintBottom_toTopOf="@+id/mobileh"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.116"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/genderh"
+android:textStyle="bold"
+        android:textSize="35dp"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>

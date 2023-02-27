@@ -29,9 +29,15 @@ public class MainActivity extends AppCompatActivity {
 
         MyDBHandler db = new MyDBHandler(MainActivity.this);//backend api
 
+
         // fetching all record from database
         List<Contact> contactList = db.getAllContacts();
 
+        db.addContact(new Contact(55, "ram", "5555"));
+
+        for (Contact contact : contactList) {
+            System.out.println("data" + contact);
+        }
 
         //user your recyclerview
         recyclerViewAdapter = new RecyclerViewAdapter(MainActivity.this, contactList);
