@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".AddStudent">
+
+
+    <TextView
+        android:id="@+id/rHeading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Please register here "
+        android:textSize="35dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/scholarId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Enter id"
+        android:inputType="number"
+        android:scrollIndicators=""
+        android:textSize="24dp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toTopOf="@+id/sName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rHeading"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <EditText
+        android:id="@+id/sName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Enter name"
+        android:inputType="textPersonName"
+        android:textSize="24dp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toTopOf="@+id/genderRadioGroup"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scholarId"
+        app:layout_constraintVertical_bias="0.5" />
+    <TextView
+        android:id="@+id/sGenderTxtView"
+        android:layout_width="86dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="-15dp"
+        android:text="Choose Gender"
+        android:textSize="24dp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toTopOf="@+id/sMobile"
+        app:layout_constraintEnd_toStartOf="@+id/genderRadioGroup"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sName"
+        app:layout_constraintVertical_bias="0.615" />
+
+    <RadioGroup
+        android:id="@+id/genderRadioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:orientation="horizontal"
+
+        app:layout_constraintBottom_toTopOf="@+id/sMobile"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/sGenderTxtView"
+        app:layout_constraintTop_toBottomOf="@+id/sName"
+        app:layout_constraintVertical_bias="0.5">
+
+        <RadioButton
+            android:id="@+id/sMale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Male"
+            android:textSize="24dp" />
+
+        <RadioButton
+            android:id="@+id/sFemale"
+            android:layout_width="wrap_content"
+
+            android:layout_height="match_parent"
+            android:text="Female"
+            android:textSize="24dp" />
+
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/sMobile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Enter  mobile number "
+        android:inputType="number"
+        android:textSize="24dp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toTopOf="@+id/sEmail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/genderRadioGroup"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <EditText
+        android:id="@+id/sEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Enter  Email"
+        android:inputType="textEmailAddress"
+        android:textSize="24dp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toTopOf="@+id/sDistrict"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sMobile"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <EditText
+        android:id="@+id/sDistrict"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Enter district"
+        android:inputType="textPersonName"
+        android:textSize="24dp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toTopOf="@+id/sState"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sEmail"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <EditText
+        android:id="@+id/sState"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Enter state"
+        android:inputType="textPersonName"
+        android:textSize="24dp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toTopOf="@+id/sReset"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sDistrict"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <Button
+        android:id="@+id/sReset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:onClick="btnReset"
+        android:text="Reset"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/sSubmit"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/sSubmit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="btnSubmit"
+        android:text="submit"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/sReset"
+        app:layout_constraintTop_toBottomOf="@+id/sState" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

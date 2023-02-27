@@ -24,6 +24,8 @@ public class MyDBHandler extends SQLiteOpenHelper {
         String create = "CREATE TABLE " + Params.TABLE_NAME + "("
                 + Params.KEY_ID + " INTEGER PRIMARY KEY AUTOINCREMENT ," + Params.KEY_NAME
                 + " TEXT, " + Params.KEY_PHONE + " TEXT" + ")";
+
+
         Log.d(" ", "Query being run is : " + create);
         db.execSQL(create);
     }

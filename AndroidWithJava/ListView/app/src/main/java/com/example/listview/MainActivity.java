@@ -64,7 +64,9 @@ public class MainActivity extends AppCompatActivity {
             arrayLang.add("java");
             arrayLang.add("R");
             arrayLang.add("Python");
-            ArrayAdapter<String> arrayAdapterLang = new ArrayAdapter<>(getApplicationContext(), android.R.layout.simple_list_item_1, arrayLang);
+
+            ArrayAdapter<String> arrayAdapterLang = new ArrayAdapter<>(getApplicationContext(), android.R.layout.simple_list_item_2, arrayLang);
+
             autotxtview.setAdapter(arrayAdapterLang);
             autotxtview.setThreshold(1);
         }
