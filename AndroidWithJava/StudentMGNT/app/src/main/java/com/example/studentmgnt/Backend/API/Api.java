@@ -34,6 +34,7 @@ public class Api extends SQLiteOpenHelper {
         String create2 = "CREATE TABLE " + BackendInfo.table_name + "(" +
 
                 Table.SCH_ID + "  INTEGER PRIMARY KEY," +
+                Table.PASSWORD + " TEXT, " +
                 Table.NAME + " TEXT, " +
                 Table.GENDER + " TEXT, " +
                 Table.MOBILE + " TEXT, " +
@@ -62,7 +63,10 @@ public class Api extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
 
+        System.out.println(student);
+//
         values.put(Table.SCH_ID, student.getSch_id());
+        values.put(Table.PASSWORD, student.getPasword());
         values.put(Table.NAME, student.getName());
         values.put(Table.GENDER, student.getGender());
         values.put(Table.MOBILE, student.getMobile());
@@ -70,10 +74,6 @@ public class Api extends SQLiteOpenHelper {
         values.put(Table.DISTRICT, student.getDistrict());
         values.put(Table.STATE, student.getState());
         values.put(Table.ISADMIN, student.isAdmin());
-
-        System.out.println(values);
-
-
         try {
             db.insertOrThrow(
                     BackendInfo.table_name, null, values);
@@ -98,15 +98,14 @@ public class Api extends SQLiteOpenHelper {
         while (cursor.moveToNext()) {
             Student student = new Student();
             student.setSch_id(Integer.parseInt(cursor.getString(0)));
-            student.setName(cursor.getString(1));
-            student.setGender(cursor.getString(2));
-
-
-            student.setMobile(cursor.getString(3));
-            student.setEmail(cursor.getString(4));
-            student.setDistrict(cursor.getString(5));
-            student.setState(cursor.getString(6));
-            student.setAdmin(Boolean.parseBoolean(cursor.getString(7)));
+            student.setPasword(cursor.getString(1));
+            student.setName(cursor.getString(2));
+            student.setGender(cursor.getString(3));
+            student.setMobile(cursor.getString(4));
+            student.setEmail(cursor.getString(5));
+            student.setDistrict(cursor.getString(6));
+            student.setState(cursor.getString(7));
+            student.setAdmin(Boolean.parseBoolean(cursor.getString(8)));
             students.add(student);
         }
         BackendInfo.printLog("data fetched successfully ");
@@ -134,7 +133,7 @@ public class Api extends SQLiteOpenHelper {
 
         values.put(Table.SCH_ID, student.getSch_id());
         values.put(Table.NAME, student.getName());
-//        values.put(Table.GENDER, student.getGender());
+        values.put(Table.GENDER, student.getGender());
         values.put(Table.MOBILE, student.getMobile());
         values.put(Table.EMAIL, student.getEmail());
         values.put(Table.DISTRICT, student.getDistrict());
@@ -157,4 +156,6 @@ public class Api extends SQLiteOpenHelper {
         db.close();
         return a;
     }
+
+
 }

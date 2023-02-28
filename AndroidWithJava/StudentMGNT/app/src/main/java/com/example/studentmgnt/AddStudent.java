@@ -17,7 +17,7 @@ import com.example.studentmgnt.model.Student;
 public class AddStudent extends AppCompatActivity {
     TextView rHeading;
     Button rReset, rSubmit;//r(register submit)
-    EditText rSch_id, rName, rMobile, rEmail, rDistrict, rState;
+    EditText rSch_id, rName, rMobile, rEmail, rDistrict, rState, rpassword;
     RadioGroup rgenderGroup;
     RadioButton rGender;
 
@@ -29,6 +29,7 @@ public class AddStudent extends AppCompatActivity {
 
 
         rSch_id = findViewById(R.id.scholarId);
+        rpassword = findViewById(R.id.spassword);
         rName = findViewById(R.id.sName);
         rgenderGroup = findViewById(R.id.genderRadioGroup);
         rMobile = findViewById(R.id.sMobile);
@@ -80,8 +81,9 @@ public class AddStudent extends AppCompatActivity {
 
 
         int sch_id;
-        String name, gender, mobile, email, district, state;
+        String name, gender, mobile, email, district, state, psword;
         sch_id = Integer.parseInt(rSch_id.getText().toString());
+        psword = rpassword.getText().toString();
         name = rName.getText().toString();
         gender = rGender.getText().toString();
         mobile = rMobile.getText().toString();
@@ -90,13 +92,13 @@ public class AddStudent extends AppCompatActivity {
         state = rState.getText().toString();
 
         Api db = new Api(this);
-        boolean check = db.addStudent(new Student(sch_id, name, gender, mobile, email, district, state, false));
+        boolean check = db.addStudent(new Student(sch_id, psword, name, gender, mobile, email, district, state, false));
+
         if (check)
             Toast.makeText(this, "data added successfully ", Toast.LENGTH_SHORT).show();
         else Toast.makeText(this, "failed to add  ", Toast.LENGTH_SHORT).show();
         for (Student student : db.getAllStudent()) {
             System.out.println(student);
-
         }
 
 
