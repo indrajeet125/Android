@@ -2,6 +2,8 @@ package com.example.studentmgnt.Backend.TableInfo;
 
 public class Table {
     public static String SCH_ID= "sch_id";
+    public static String PASSWORD= "password";
+
     public static String NAME= "name";
     public static String GENDER="gender";
     public static String MOBILE="mobile";
