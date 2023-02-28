@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         SharedPreferences pref = getSharedPreferences("LOGIN", MODE_PRIVATE);
-        Boolean check = pref.getBoolean("id", false);
+        Boolean check = pref.getBoolean("islogin", false);
         Intent inext;
         if (check) {
             inext = new Intent(MainActivity.this, Home.class);

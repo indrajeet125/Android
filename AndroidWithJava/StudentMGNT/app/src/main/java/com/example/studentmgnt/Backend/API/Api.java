@@ -116,18 +116,18 @@ public class Api extends SQLiteOpenHelper {
     }
 
     //    delete(String table, String whereClause, String[] whereArgs) {
-    public int deleteById(int id) {
+    public boolean deleteById(int id) {
         SQLiteDatabase db = this.getWritableDatabase();
         int deletedROW = db.delete(BackendInfo.table_name, Table.SCH_ID + "=?", new String[]{String.valueOf(id)});
         db.close();
         if (deletedROW > 0)
             BackendInfo.printLog("delete successfully");
         else BackendInfo.printLog("delete failed ");
-        return deletedROW;
+        return deletedROW>0;
 
     }
 
-    public int updateStudent(Student student) {
+    public boolean updateStudent(Student student) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
 
@@ -140,13 +140,13 @@ public class Api extends SQLiteOpenHelper {
         values.put(Table.STATE, student.getState());
         values.put(Table.ISADMIN, student.isAdmin());
 
-        int a = db.update(BackendInfo.table_name, values, Table.SCH_ID + "=?", new String[]{String.valueOf(student.getSch_id())});
+       boolean check  = db.update(BackendInfo.table_name, values, Table.SCH_ID + "=?", new String[]{String.valueOf(student.getSch_id())})>0;
         db.close();
-        if (a > 0)
+        if (check)
             BackendInfo.printLog("data updated successfully ");
         else BackendInfo.printLog("data updated failed  ");
 
-        return a;
+        return check;
 
     }
 

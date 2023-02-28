@@ -31,12 +31,12 @@ public class AddStudent extends AppCompatActivity {
         rSch_id = findViewById(R.id.scholarId);
         rpassword = findViewById(R.id.spassword);
         rName = findViewById(R.id.sName);
-        rgenderGroup = findViewById(R.id.genderRadioGroup);
+        rgenderGroup = findViewById(R.id.sgenderRadioGroup);
         rMobile = findViewById(R.id.sMobile);
         rEmail = findViewById(R.id.sEmail);
         rDistrict = findViewById(R.id.sDistrict);
         rState = findViewById(R.id.sState);
-        rReset = findViewById(R.id.sReset);
+//        rReset = findViewById(R.id.sReset);
 
 
         rgenderGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
@@ -75,7 +75,7 @@ public class AddStudent extends AppCompatActivity {
         reserField();
     }
 
-    public void btnSubmit(View view) {
+    protected void btnSubmit(View view) {
         // future do some validation
         System.out.println("submit  btn called ...............");
 

@@ -3,16 +3,17 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="#8FE850"
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".AddStudent">
 
 
     <TextView
-        android:id="@+id/rHeading"
+        android:id="@+id/sHeading"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="new Registration "
+        android:text="New Registration "
         android:textSize="35dp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -20,55 +21,43 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+
     <EditText
         android:id="@+id/scholarId"
-        android:layout_width="186dp"
-        android:layout_height="55dp"
-        android:layout_marginStart="16dp"
+        android:layout_width="248dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="12dp"
         android:ems="10"
+        android:gravity="center"
         android:hint="Enter id"
         android:inputType="number"
         android:scrollIndicators=""
         android:textSize="24dp"
         android:textStyle="bold|italic"
-        app:layout_constraintBottom_toTopOf="@+id/sName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.457"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rHeading"
-        app:layout_constraintVertical_bias="0.5" />
+        app:layout_constraintTop_toBottomOf="@+id/sHeading" />
 
     <EditText
         android:id="@+id/sName"
-        android:layout_width="271dp"
-        android:layout_height="41dp"
+        android:layout_width="272dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="80dp"
         android:ems="10"
+        android:gravity="center"
         android:hint="Enter name"
         android:inputType="textPersonName"
         android:textSize="24dp"
-        android:textStyle="bold|italic"
-        app:layout_constraintBottom_toTopOf="@+id/genderRadioGroup"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/scholarId"
-        app:layout_constraintVertical_bias="0.5" />
 
-    <TextView
-        android:id="@+id/sGenderTxtView"
-        android:layout_width="86dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="-15dp"
-        android:text="Choose Gender"
-        android:textSize="24dp"
         android:textStyle="bold|italic"
-        app:layout_constraintBottom_toTopOf="@+id/sMobile"
-        app:layout_constraintEnd_toStartOf="@+id/genderRadioGroup"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.468"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sName"
-        app:layout_constraintVertical_bias="0.615" />
+        app:layout_constraintTop_toBottomOf="@+id/scholarId" />
 
     <RadioGroup
-        android:id="@+id/genderRadioGroup"
+        android:id="@+id/sgenderRadioGroup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -77,7 +66,7 @@
 
         app:layout_constraintBottom_toTopOf="@+id/sMobile"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/sGenderTxtView"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/sName"
         app:layout_constraintVertical_bias="0.5">
 
@@ -92,8 +81,15 @@
             android:id="@+id/sFemale"
             android:layout_width="wrap_content"
 
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:text="Female"
+            android:textSize="24dp" />
+
+        <RadioButton
+            android:id="@+id/sOther"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Other "
             android:textSize="24dp" />
 
     </RadioGroup>
@@ -103,15 +99,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
+        android:gravity="center"
         android:hint="Enter  mobile number "
         android:inputType="number"
+
         android:textSize="24dp"
         android:textStyle="bold|italic"
         app:layout_constraintBottom_toTopOf="@+id/sEmail"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/genderRadioGroup"
+        app:layout_constraintTop_toBottomOf="@+id/sgenderRadioGroup"
         app:layout_constraintVertical_bias="0.5" />
 
     <EditText
@@ -119,12 +117,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
+        android:gravity="center"
         android:hint="Enter  Email"
         android:inputType="textEmailAddress"
         android:textSize="24dp"
         android:textStyle="bold|italic"
         app:layout_constraintBottom_toTopOf="@+id/sDistrict"
         app:layout_constraintEnd_toEndOf="parent"
+
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/sMobile"
@@ -135,8 +135,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
+        android:gravity="center"
         android:hint="Enter district"
         android:inputType="textPersonName"
+
         android:textSize="24dp"
         android:textStyle="bold|italic"
         app:layout_constraintBottom_toTopOf="@+id/sState"
@@ -151,8 +153,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
+        android:gravity="center"
         android:hint="Enter state"
         android:inputType="textPersonName"
+
         android:textSize="24dp"
         android:textStyle="bold|italic"
         app:layout_constraintBottom_toTopOf="@+id/sReset"
@@ -166,13 +170,13 @@
         android:id="@+id/sReset"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
         android:onClick="btnReset"
         android:text="Reset"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/sSubmit"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sState" />
 
     <Button
         android:id="@+id/sSubmit"
@@ -188,19 +192,21 @@
 
     <EditText
         android:id="@+id/spassword"
-        android:layout_width="113dp"
-        android:layout_height="53dp"
+        android:layout_width="256dp"
+        android:layout_height="49dp"
         android:ems="10"
+        android:gravity="center"
+        android:hint="create password "
+
+
+        android:inputType="textPersonName"
         android:textSize="24dp"
         android:textStyle="bold"
-
-        android:hint="create passwrod "
-        android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/sName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/scholarId"
-        app:layout_constraintTop_toBottomOf="@+id/rHeading"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scholarId"
         app:layout_constraintVertical_bias="0.5" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
