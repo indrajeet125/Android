@@ -4,28 +4,34 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#32969F"
     tools:context=".login">
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="68dp"
         android:text="Login here"
-        android:textSize="35dp"
-        app:layout_constraintBottom_toTopOf="@+id/LoginId"
+        android:textSize="45dp"
+        android:padding="10dp"
+        android:textStyle="bold"
+
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.384"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.5" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/LoginId"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="248dp"
+        android:layout_height="74dp"
         android:layout_marginTop="132dp"
-        android:hint="Enter id "
-        android:textSize="35dp"
+        android:hint="user Id"
+        android:textStyle="bold"
+
+        android:textSize="30dp"
+        android:gravity="center"
 
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -34,11 +40,13 @@
 
     <EditText
         android:id="@+id/lgPassword"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="252dp"
+        android:layout_height="54dp"
         android:layout_marginBottom="224dp"
-        android:hint="Enter Password"
-        android:textSize="35dp"
+        android:hint="Password"
+        android:textSize="30dp"
+android:gravity="center"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.501"
@@ -50,8 +58,10 @@
         android:id="@+id/LoginPageBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Login"
         android:onClick="login"
+        android:text="Login"
+        android:textStyle="bold"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -60,16 +70,19 @@
         app:layout_constraintVertical_bias="0.19" />
 
     <Button
+
         android:id="@+id/goforRegister"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="goforRegister"
-        android:text="Register"
-        app:layout_constraintBottom_toTopOf="@+id/lgPassword"
+        android:text="new Register "
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.431"
-        app:layout_constraintStart_toEndOf="@+id/textView"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.212" />
+        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/LoginPageBtn"
+        app:layout_constraintVertical_bias="0.158" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

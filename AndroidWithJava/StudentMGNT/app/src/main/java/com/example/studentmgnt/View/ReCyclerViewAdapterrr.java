@@ -72,6 +72,7 @@ public class ReCyclerViewAdapterrr extends RecyclerView.Adapter<ReCyclerViewAdap
             int pos = this.getAdapterPosition();
             Student student = studentList.get(pos);
             System.out.println(pos);
+
             Intent intent = new Intent(context, displayonestundentDetails.class);
             System.out.println(student);
 

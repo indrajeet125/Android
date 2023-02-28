@@ -10,24 +10,26 @@
         android:id="@+id/ViewAll"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="172dp"
         android:onClick="viewallstudent"
         android:text="showAllStudents"
+
+
         app:layout_constraintBottom_toTopOf="@+id/ADD"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.706"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.5" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/ADD"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="addStudent"
-        android:text="add"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="add new "
+        app:layout_constraintBottom_toTopOf="@+id/idForOperation"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.552"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ViewAll"
         app:layout_constraintVertical_bias="0.5" />
@@ -36,12 +38,53 @@
         android:id="@+id/logout"
         android:layout_width="176dp"
         android:layout_height="73dp"
-        android:text="logout"
         android:onClick="logout"
+        android:text="logout"
         app:layout_constraintBottom_toTopOf="@+id/ViewAll"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.871"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.268" />
+
+    <Button
+        android:id="@+id/updatebtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="updateStudent"
+        android:text="Update"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/deletebtn"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/idForOperation"
+        app:layout_constraintVertical_bias="0.132" />
+
+    <Button
+        android:id="@+id/deletebtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="deleteStudent"
+        android:text="delete"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/updatebtn"
+        app:layout_constraintTop_toBottomOf="@+id/idForOperation"
+        app:layout_constraintVertical_bias="0.105" />
+
+    <EditText
+        android:id="@+id/idForOperation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="ID"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ADD" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

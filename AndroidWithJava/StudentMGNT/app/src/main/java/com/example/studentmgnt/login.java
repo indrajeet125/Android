@@ -34,7 +34,8 @@ public class login extends AppCompatActivity {
         Api db = new Api(this);
         List<Student> studentList = db.getAllStudent();
         for (int i = 0; i < studentList.size(); i++) {
-            if (studentList.get(i).getSch_id() == id && studentList.get(i).getPasword() == password) {
+//            System.out.println(studentList.get(i));
+            if (studentList.get(i).getSch_id() == id && studentList.get(i).getPasword().equals(password)) {
                 return true;
             }
         }
@@ -48,7 +49,7 @@ public class login extends AppCompatActivity {
         if (checkCredential(id, password)) {
             SharedPreferences sharedPreferences = getSharedPreferences("LOGIN", MODE_PRIVATE);
             SharedPreferences.Editor edit = sharedPreferences.edit();
-            edit.putBoolean(id+"", true);
+            edit.putBoolean("islogin", true);
             edit.apply();
 
             Intent inext = new Intent(this, Home.class);

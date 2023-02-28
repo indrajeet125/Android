@@ -9,13 +9,20 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+
+
+        android:background="#000010">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="ScholerID"
+            android:textColor="@color/white"
+            android:textSize="35dp"
+            android:textStyle="bold"
+
 
             />
 
@@ -24,21 +31,28 @@
 
             android:layout_height="wrap_content"
             android:layout_weight="2"
+
             android:text="Name "
-            android:visibility="gone"/>
+            android:textColor="@color/white"
+            android:textSize="34dp"
+
+            android:textStyle="bold"
+            android:visibility="gone" />
 
         <TextView
             android:layout_width="wrap_content"
-
             android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:textColor="@color/white"
 
-            android:text="Name " />
+            android:layout_weight="1"
+            android:text="Name "
+
+            android:textSize="34dp" />
     </LinearLayout>
 
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <androidx.recyclerview.widget.RecyclerView
