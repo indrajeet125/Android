@@ -3,17 +3,17 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="#8FE850"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".AddStudent">
+    android:background="#53B35A"
+    tools:context=".updatestudnetdetails">
+
 
 
     <TextView
-        android:id="@+id/sHeading"
+        android:id="@+id/urHeading"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="New Registration "
+        android:text="Update Record  "
         android:textSize="35dp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -22,8 +22,8 @@
         app:layout_constraintTop_toTopOf="parent" />
 
 
-    <EditText
-        android:id="@+id/scholarId"
+    <TextView
+        android:id="@+id/uscholarId"
         android:layout_width="248dp"
         android:layout_height="49dp"
         android:layout_marginTop="12dp"
@@ -37,29 +37,29 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.457"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sHeading" />
+        app:layout_constraintTop_toBottomOf="@+id/urHeading" />
 
     <EditText
-        android:id="@+id/spassword"
+        android:id="@+id/uspassword"
         android:layout_width="256dp"
         android:layout_height="49dp"
         android:ems="10"
         android:gravity="center"
-        android:hint="create password "
+        android:hint="Change password "
 
 
         android:inputType="textPersonName"
         android:textSize="24dp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/sName"
+        app:layout_constraintBottom_toTopOf="@+id/usName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/scholarId"
+        app:layout_constraintTop_toBottomOf="@+id/uscholarId"
         app:layout_constraintVertical_bias="0.5" />
 
     <EditText
-        android:id="@+id/sName"
+        android:id="@+id/usName"
         android:layout_width="272dp"
         android:layout_height="60dp"
         android:layout_marginTop="80dp"
@@ -73,31 +73,31 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.468"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/scholarId" />
+        app:layout_constraintTop_toBottomOf="@+id/uscholarId" />
 
     <RadioGroup
-        android:id="@+id/sgenderRadioGroup"
+        android:id="@+id/ugenderRadioGroup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
         android:orientation="horizontal"
 
-        app:layout_constraintBottom_toTopOf="@+id/sMobile"
+        app:layout_constraintBottom_toTopOf="@+id/usMobile"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sName"
+        app:layout_constraintTop_toBottomOf="@+id/usName"
         app:layout_constraintVertical_bias="0.5">
 
         <RadioButton
-            android:id="@+id/sMale"
+            android:id="@+id/usMale"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Male"
             android:textSize="24dp" />
 
         <RadioButton
-            android:id="@+id/sFemale"
+            android:id="@+id/usFemale"
             android:layout_width="wrap_content"
 
             android:layout_height="wrap_content"
@@ -105,7 +105,7 @@
             android:textSize="24dp" />
 
         <RadioButton
-            android:id="@+id/sOther"
+            android:id="@+id/usOther"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Other "
@@ -114,7 +114,7 @@
     </RadioGroup>
 
     <EditText
-        android:id="@+id/sMobile"
+        android:id="@+id/usMobile"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -124,15 +124,15 @@
 
         android:textSize="24dp"
         android:textStyle="bold|italic"
-        app:layout_constraintBottom_toTopOf="@+id/sEmail"
+        app:layout_constraintBottom_toTopOf="@+id/usEmail"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sgenderRadioGroup"
+        app:layout_constraintTop_toBottomOf="@+id/ugenderRadioGroup"
         app:layout_constraintVertical_bias="0.5" />
 
     <EditText
-        android:id="@+id/sEmail"
+        android:id="@+id/usEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -141,16 +141,16 @@
         android:inputType="textEmailAddress"
         android:textSize="24dp"
         android:textStyle="bold|italic"
-        app:layout_constraintBottom_toTopOf="@+id/sDistrict"
+        app:layout_constraintBottom_toTopOf="@+id/usDistrict"
         app:layout_constraintEnd_toEndOf="parent"
 
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sMobile"
+        app:layout_constraintTop_toBottomOf="@+id/usMobile"
         app:layout_constraintVertical_bias="0.5" />
 
     <EditText
-        android:id="@+id/sDistrict"
+        android:id="@+id/usDistrict"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -160,15 +160,15 @@
 
         android:textSize="24dp"
         android:textStyle="bold|italic"
-        app:layout_constraintBottom_toTopOf="@+id/sState"
+        app:layout_constraintBottom_toTopOf="@+id/usState"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sEmail"
+        app:layout_constraintTop_toBottomOf="@+id/usEmail"
         app:layout_constraintVertical_bias="0.5" />
 
     <EditText
-        android:id="@+id/sState"
+        android:id="@+id/usState"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -178,35 +178,35 @@
 
         android:textSize="24dp"
         android:textStyle="bold|italic"
-        app:layout_constraintBottom_toTopOf="@+id/sReset"
+        app:layout_constraintBottom_toTopOf="@+id/usReset"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sDistrict"
+        app:layout_constraintTop_toBottomOf="@+id/usDistrict"
         app:layout_constraintVertical_bias="0.5" />
 
     <Button
-        android:id="@+id/sReset"
+        android:id="@+id/usReset"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="btnReset"
+        android:onClick="btnupdateReset"
         android:text="Reset"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/sSubmit"
+        app:layout_constraintEnd_toStartOf="@+id/usSubmit"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sState" />
+        app:layout_constraintTop_toBottomOf="@+id/usState" />
 
     <Button
-        android:id="@+id/sSubmit"
+        android:id="@+id/usSubmit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="btnSubmit"
-        android:text="submit"
+        android:onClick="btnupdateSubmit"
+        android:text="Update"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/sReset"
-        app:layout_constraintTop_toBottomOf="@+id/sState" />
+        app:layout_constraintStart_toEndOf="@+id/usReset"
+        app:layout_constraintTop_toBottomOf="@+id/usState" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
