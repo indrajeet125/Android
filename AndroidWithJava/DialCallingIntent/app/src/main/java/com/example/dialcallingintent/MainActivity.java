@@ -23,12 +23,13 @@ public class MainActivity extends AppCompatActivity {
         System.out.println("call button clicked --------------n\n\n\n");
         EditText dial = findViewById(R.id.number);
         String number = (dial.getText()).toString();
-        if (number.length() != 10) {
-            Toast.makeText(this, "Enter the correct Number  10 digit ", Toast.LENGTH_SHORT).show();
+        int n = number.length();
+        if (n != 10) {
+            Toast.makeText(this, "Enter the correct Number  10 digit\n you entered " + n + " digit", Toast.LENGTH_SHORT).show();
             return;
         }
         Intent intent = new Intent(Intent.ACTION_CALL);
-        intent.setData(Uri.parse("tel:"+number));
+        intent.setData(Uri.parse("tel:" + number));
         dial.setText("");
         startActivity(intent);
 
@@ -38,8 +39,18 @@ public class MainActivity extends AppCompatActivity {
     public void onDial(View view) {
 
         Intent intent = new Intent(Intent.ACTION_DIAL);
+        EditText dial = findViewById(R.id.number);
+        String number = (dial.getText()).toString();
+        int n = number.length();
 
-        startActivity(intent);
+
+        if (n == 10 || n == 0) {
+            intent.setData(Uri.parse("tel:" + number));
+            startActivity(intent);
+        } else {
+            Toast.makeText(this, "Enter the correct Number  10 digit\n you entered " + n + " digit", Toast.LENGTH_SHORT).show();
+            return;
+        }
 
     }
 }

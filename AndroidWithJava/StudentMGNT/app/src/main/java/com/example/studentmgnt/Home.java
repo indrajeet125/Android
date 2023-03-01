@@ -95,9 +95,9 @@ public class Home extends AppCompatActivity {
         } else {
 
 
-//            Intent intent = new Intent(this, updatestudnetdetails.class);
-//            intent.putExtra("id", student.getSch_id() );
-//            startActivity(intent);
+            Intent intent = new Intent(this, updatestudnetdetails.class);
+            intent.putExtra("id", student.getSch_id() );
+            startActivity(intent);
 
         }
 

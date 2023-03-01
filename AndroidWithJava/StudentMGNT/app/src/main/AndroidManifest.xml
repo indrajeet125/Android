@@ -12,6 +12,14 @@
         android:theme="@style/Theme.StudentMGNT"
         tools:targetApi="31">
         <activity
+            android:name=".updatestudnetdetails"
+            android:exported="false">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Home" />
+
+        </activity>
+        <activity
             android:name=".Home"
             android:exported="false" />
         <activity
