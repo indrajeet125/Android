@@ -39,8 +39,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View v) {
         if (v.getId() == R.id.camera) {
-            System.out.println("Camera button Clcked");
             Intent iCamera = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+            System.out.println("Camera button Clcked");
             startActivityForResult(iCamera, CAMERA_REQ_CODE);
 
         } else if (v.getId() == R.id.gallery) {
