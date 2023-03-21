@@ -48,7 +48,7 @@
         android:hint="create password "
 
 
-        android:inputType="textPersonName"
+        android:inputType="textPassword"
         android:textSize="24dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/sName"

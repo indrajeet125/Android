@@ -15,10 +15,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         VideoView videoView=findViewById(R.id.videoview);
 
         String vpath="android.resource://"+getPackageName()+"/"+R.raw.putaping;
-       Uri videoUri= Uri.parse(vpath);
+        Uri videoUri= Uri.parse(vpath);
         videoView.setVideoPath(vpath);
 
         videoView.start();

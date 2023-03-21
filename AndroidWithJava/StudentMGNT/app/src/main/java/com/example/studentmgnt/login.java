@@ -34,7 +34,7 @@ public class login extends AppCompatActivity {
         Api db = new Api(this);
         List<Student> studentList = db.getAllStudent();
         for (int i = 0; i < studentList.size(); i++) {
-//            System.out.println(studentList.get(i));
+            System.out.println(studentList.get(i));
             if (studentList.get(i).getSch_id() == id && studentList.get(i).getPasword().equals(password)) {
                 return true;
             }
@@ -43,8 +43,21 @@ public class login extends AppCompatActivity {
     }
 
     public void login(View view) {
-        int id = Integer.parseInt(eid.getText().toString());
+        System.out.println("login clickerd ");
+//        int x = 9, y = 0;
+//        if (x > y) return;
+
+        String rsc_id = eid.getText().toString();
+        if (rsc_id.length() != 3) {
+            Toast.makeText(this, "enter valid Scholer ID 3digit ", Toast.LENGTH_SHORT).show();
+            return;
+        }
+        int id = Integer.parseInt(rsc_id);
         String password = epassword.getText().toString();
+        if (password.length() < 6) {
+            Toast.makeText(this, "enter password valid min 6 length ", Toast.LENGTH_SHORT).show();
+            return;
+        }
 
         if (checkCredential(id, password)) {
             SharedPreferences sharedPreferences = getSharedPreferences("LOGIN", MODE_PRIVATE);
@@ -57,7 +70,6 @@ public class login extends AppCompatActivity {
 
             Toast.makeText(this, "Login success", Toast.LENGTH_SHORT).show();
         } else Toast.makeText(this, "Login failed ", Toast.LENGTH_SHORT).show();
-
 
 
     }

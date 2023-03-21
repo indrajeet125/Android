@@ -119,9 +119,11 @@ public class updatestudnetdetails extends AppCompatActivity {
         Api db = new Api(this);
         boolean check = db.updateStudent(new Student(sch_id, psword, name, gender, mobile, email, district, state, false));
 
-        if (check)
+        if (check) {
             Toast.makeText(this, "data updated  successfully ", Toast.LENGTH_SHORT).show();
-        else Toast.makeText(this, "failed to update   ", Toast.LENGTH_SHORT).show();
+        Intent i=new Intent(this,Home.class);
+        startActivity(i);
+        }  else Toast.makeText(this, "failed to update   ", Toast.LENGTH_SHORT).show();
 
         btnupdateReset(view);
 
