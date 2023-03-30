@@ -1,0 +1,4 @@
+#Fri Mar 31 02:26:08 IST 2023
+base.0=G\:\\Documents\\development\\Android Development\\AndroidWithKotlin\\EmailerApp\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
+renamed.0=classes.dex
+path.0=classes.dex
