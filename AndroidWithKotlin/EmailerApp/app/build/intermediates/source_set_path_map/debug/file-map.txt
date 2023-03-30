@@ -1,0 +1,32 @@
+com.example.emailerapp-viewpager2-1.0.0-0 C:\Users\indra\.gradle\caches\transforms-3\03d2eddd7c1e665a9f8b90894cf88345\transformed\viewpager2-1.0.0\res
+com.example.emailerapp-cardview-1.0.0-1 C:\Users\indra\.gradle\caches\transforms-3\0f83c5d5bf7c6e76956157cb777fbf37\transformed\cardview-1.0.0\res
+com.example.emailerapp-emoji2-views-helper-1.2.0-2 C:\Users\indra\.gradle\caches\transforms-3\16a06af682caf3e4461b750d0ec3329b\transformed\emoji2-views-helper-1.2.0\res
+com.example.emailerapp-core-ktx-1.9.0-3 C:\Users\indra\.gradle\caches\transforms-3\3804df00b84543228f2beb9eb1b2fe30\transformed\core-ktx-1.9.0\res
+com.example.emailerapp-coordinatorlayout-1.1.0-4 C:\Users\indra\.gradle\caches\transforms-3\38d09d4ba0d273158c68be2805b798b3\transformed\coordinatorlayout-1.1.0\res
+com.example.emailerapp-appcompat-resources-1.6.1-5 C:\Users\indra\.gradle\caches\transforms-3\41dcf42bc854479e43f628ab1a52618d\transformed\appcompat-resources-1.6.1\res
+com.example.emailerapp-recyclerview-1.1.0-6 C:\Users\indra\.gradle\caches\transforms-3\52d740e8e970387c182bf237433c154a\transformed\recyclerview-1.1.0\res
+com.example.emailerapp-emoji2-1.2.0-7 C:\Users\indra\.gradle\caches\transforms-3\66814d0c9c223a08105bc116aeb53dd5\transformed\emoji2-1.2.0\res
+com.example.emailerapp-activity-1.6.0-8 C:\Users\indra\.gradle\caches\transforms-3\6bd59ce5ad314a42b8a1944d4e5257cc\transformed\activity-1.6.0\res
+com.example.emailerapp-savedstate-1.2.0-9 C:\Users\indra\.gradle\caches\transforms-3\6c799608a67394e2261b50f8508ea239\transformed\savedstate-1.2.0\res
+com.example.emailerapp-appcompat-1.6.1-10 C:\Users\indra\.gradle\caches\transforms-3\8d9343f569df63b726615d18b45679d4\transformed\appcompat-1.6.1\res
+com.example.emailerapp-fragment-1.3.6-11 C:\Users\indra\.gradle\caches\transforms-3\93ac10b68cc6b2ecdb3339310a897f91\transformed\fragment-1.3.6\res
+com.example.emailerapp-material-1.8.0-12 C:\Users\indra\.gradle\caches\transforms-3\9ae6143ba7d88d1cbf68916d08d2afcb\transformed\material-1.8.0\res
+com.example.emailerapp-annotation-experimental-1.3.0-13 C:\Users\indra\.gradle\caches\transforms-3\9fae957ef0e1266a83e5188cb210102e\transformed\annotation-experimental-1.3.0\res
+com.example.emailerapp-lifecycle-viewmodel-2.5.1-14 C:\Users\indra\.gradle\caches\transforms-3\b510763edb1ef6286222c38b148ec3db\transformed\lifecycle-viewmodel-2.5.1\res
+com.example.emailerapp-lifecycle-runtime-2.5.1-15 C:\Users\indra\.gradle\caches\transforms-3\bd2013a7ba3836a0788f3d8b2296a53a\transformed\lifecycle-runtime-2.5.1\res
+com.example.emailerapp-startup-runtime-1.1.1-16 C:\Users\indra\.gradle\caches\transforms-3\bdeac150b6ce0fcc7996d2b9a9f9c390\transformed\startup-runtime-1.1.1\res
+com.example.emailerapp-core-1.9.0-17 C:\Users\indra\.gradle\caches\transforms-3\c73afc1fa215d9ca128620a3c01802b0\transformed\core-1.9.0\res
+com.example.emailerapp-lifecycle-livedata-core-2.5.1-18 C:\Users\indra\.gradle\caches\transforms-3\d4c7398b925a7fa33014a3b3d90293a8\transformed\lifecycle-livedata-core-2.5.1\res
+com.example.emailerapp-lifecycle-process-2.4.1-19 C:\Users\indra\.gradle\caches\transforms-3\d64e7ca6b93f4a6c092b1dd37cf249d6\transformed\lifecycle-process-2.4.1\res
+com.example.emailerapp-transition-1.2.0-20 C:\Users\indra\.gradle\caches\transforms-3\d937372f4d1bea6dffbb3852bb38fc5f\transformed\transition-1.2.0\res
+com.example.emailerapp-lifecycle-viewmodel-savedstate-2.5.1-21 C:\Users\indra\.gradle\caches\transforms-3\e563143b9fc1ce0498763a9307e41937\transformed\lifecycle-viewmodel-savedstate-2.5.1\res
+com.example.emailerapp-drawerlayout-1.1.1-22 C:\Users\indra\.gradle\caches\transforms-3\ee697cd08c56d0500233d93c4fc892de\transformed\drawerlayout-1.1.1\res
+com.example.emailerapp-constraintlayout-2.1.4-23 C:\Users\indra\.gradle\caches\transforms-3\fe5722c2d28764b765710ac6c318c6e8\transformed\constraintlayout-2.1.4\res
+com.example.emailerapp-pngs-24 G:\Documents\development\Android Development\AndroidWithKotlin\EmailerApp\app\build\generated\res\pngs\debug
+com.example.emailerapp-resValues-25 G:\Documents\development\Android Development\AndroidWithKotlin\EmailerApp\app\build\generated\res\resValues\debug
+com.example.emailerapp-rs-26 G:\Documents\development\Android Development\AndroidWithKotlin\EmailerApp\app\build\generated\res\rs\debug
+com.example.emailerapp-packageDebugResources-27 G:\Documents\development\Android Development\AndroidWithKotlin\EmailerApp\app\build\intermediates\incremental\debug\packageDebugResources\merged.dir
+com.example.emailerapp-packageDebugResources-28 G:\Documents\development\Android Development\AndroidWithKotlin\EmailerApp\app\build\intermediates\incremental\debug\packageDebugResources\stripped.dir
+com.example.emailerapp-merged_res-29 G:\Documents\development\Android Development\AndroidWithKotlin\EmailerApp\app\build\intermediates\merged_res\debug
+com.example.emailerapp-debug-30 G:\Documents\development\Android Development\AndroidWithKotlin\EmailerApp\app\src\debug\res
+com.example.emailerapp-main-31 G:\Documents\development\Android Development\AndroidWithKotlin\EmailerApp\app\src\main\res
