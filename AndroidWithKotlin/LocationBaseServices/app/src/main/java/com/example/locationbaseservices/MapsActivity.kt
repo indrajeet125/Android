@@ -1,7 +1,11 @@
 package com.example.locationbaseservices
 
+import android.graphics.Color
+import android.location.Geocoder
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
+import android.widget.Toast
 
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
@@ -10,8 +14,10 @@ import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
 import com.example.locationbaseservices.databinding.ActivityMapsBinding
+import com.google.android.gms.maps.model.CircleOptions
+import android.location.Address as Address
 
-class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
+class MapsActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnMapClickListener {
 
     private lateinit var mMap: GoogleMap
     private lateinit var binding: ActivityMapsBinding
@@ -39,14 +45,30 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
      */
     override fun onMapReady(googleMap: GoogleMap) {
         mMap = googleMap
-        googleMap.mapType = GoogleMap.MAP_TYPE_HYBRID
+        googleMap.mapType = GoogleMap.MAP_TYPE_TERRAIN
         // Add a marker in Sydney and move the camera
         val sydney = LatLng(-34.0, 151.0)
         mMap.addMarker(MarkerOptions().position(sydney).title("Marker in Sydney"))
         mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney))
+        mMap.animateCamera(CameraUpdateFactory.zoomTo(10f), 2000, null)
 
-        mMap.animateCamera(CameraUpdateFactory.zoomTo(10f),2000,null)
+        mMap.addCircle(
+            CircleOptions().center(sydney).radius(3000.0).fillColor(Color.RED)
+                .strokeColor(Color.DKGRAY)
+        )
 
+        mMap.setOnMapClickListener (this)
+    }
 
+    override fun onMapClick(p0: LatLng) {
+        mMap.addMarker(MarkerOptions().position(p0).title("clicked here "))
+        try {
+            val geocoder = Geocoder(this)
+            var arradr = geocoder.getFromLocation(p0.latitude, p0.longitude, 1)
+            arradr?.get(0)?.let { Log.d("addressLocation", it.getAddressLine(0)) }
+
+        } catch (e: Exception) {
+            println("error occurred ")
+        }
     }
 }
