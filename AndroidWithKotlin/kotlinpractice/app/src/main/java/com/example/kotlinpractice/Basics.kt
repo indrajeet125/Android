@@ -1,6 +1,6 @@
 package com.example.kotlinpractice
 
- 
+
 class Basics {}
 
 fun comment() {
