@@ -12,5 +12,10 @@
     <color name="colorPrimaryDark">#2a4d69</color>
     <color name="colorAccent">#adcbe3</color>
 
+    <color name="primary_text_color">#212121</color>
+    <color name="secondary_text_color">#9AA2AF</color>
+    <color name="white_color">#FFFFFF</color>
+    <color name="button_background_color">#63ace5</color>
+
 
 </resources>
