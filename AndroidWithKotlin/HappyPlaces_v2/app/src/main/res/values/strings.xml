@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Happy Places</string>
+
+    <!--TODO (Step 5: Here we are adding the STRING values as a constants which are required to design the Add Happy Places Screen. And which is also a standard way to develop a application in android.)-->
+    <!--START-->
+    <string name="edit_text_hint_title">Title</string>
+    <string name="edit_text_hint_description">Description</string>
+    <string name="edit_text_hint_date">Date</string>
+    <string name="edit_text_hint_location">Location</string>
+    <string name="text_add_image">ADD IMAGE</string>
+    <string name="btn_text_save">SAVE</string>
+    <!--END-->
+</resources>
