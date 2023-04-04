@@ -10,4 +10,9 @@ data class HappyPlaceModel(
     var latitude: Double,
     var longitude: Double,
 
-    )
+
+    ) {
+    override fun toString(): String {
+        return "HappyPlaceModel(id=$id, title='$title', image='$image', description='$description', date='$date', location='$location', latitude=$latitude, longitude=$longitude)"
+    }
+}

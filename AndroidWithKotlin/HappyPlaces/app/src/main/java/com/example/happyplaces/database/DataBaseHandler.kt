@@ -2,10 +2,11 @@ package com.example.happyplaces.database
 
 import android.content.ContentValues
 import android.content.Context
+import android.database.Cursor
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
-import android.os.Parcelable.Creator
 import com.example.happyplaces.models.HappyPlaceModel
+import java.sql.SQLException
 
 class DataBaseHandler(context: Context) : SQLiteOpenHelper(
     context, DATABASE_NAME, null,
@@ -64,5 +65,37 @@ class DataBaseHandler(context: Context) : SQLiteOpenHelper(
 
         var result = db.insert(TABLE_HAPPY_PLACE, null, contentValues)
         return result
+    }
+
+    fun getHappyPlcesList(): ArrayList<HappyPlaceModel> {
+        val happyPlacesList = ArrayList<HappyPlaceModel>()
+        val SELECTQUERY = "SELECT * FROM $TABLE_HAPPY_PLACE"
+        val db = this.readableDatabase
+        try {
+            val c: Cursor = db.rawQuery(SELECTQUERY, null)
+            if (c.moveToFirst()) {
+                do {
+
+                    val place = HappyPlaceModel(
+                        c.getInt(c.getColumnIndexOrThrow(KEY_ID)),
+                        c.getString(c.getColumnIndexOrThrow(KEY_TITLE)),
+                        c.getString(c.getColumnIndexOrThrow(KEY_IMAGE)),
+                        c.getString(c.getColumnIndexOrThrow(KEY_DESCRIPTION)),
+                        c.getString(c.getColumnIndexOrThrow(KEY_DATE)),
+                        c.getString(c.getColumnIndexOrThrow(KEY_LOCATION)),
+                        c.getDouble(c.getColumnIndexOrThrow(KEY_LATITUDE)),
+                        c.getDouble(c.getColumnIndexOrThrow(KEY_LONGITUDE))
+                        )
+                    happyPlacesList.add(place)
+                } while (c.moveToNext())
+            }
+            c.close()
+
+        } catch (e: SQLException) {
+            db.execSQL(SELECTQUERY)
+            return ArrayList();
+        }
+
+        return happyPlacesList;
     }
 }
