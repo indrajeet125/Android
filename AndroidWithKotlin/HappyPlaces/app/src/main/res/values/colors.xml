@@ -20,5 +20,7 @@
     <color name="circular_image_boarder_color">#757575</color>
     <color name="item_happy_place_description">#606060</color>
 
-s
+    <color name="detail_screen_description_text_color">#757575</color>
+
+
 </resources>
