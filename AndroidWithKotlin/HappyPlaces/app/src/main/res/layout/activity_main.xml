@@ -6,6 +6,23 @@
     android:layout_height="match_parent"
     tools:context=".activity.MainActivity">
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_happyplaces_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        tools:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tv_no_records_available"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="@string/note_text_no_happy_places_found_yet"
+        android:textSize="@dimen/no_records_available_text_size"
+        android:visibility="visible"
+        tools:visibility="visible" />
+
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fabAddHappyPlace"
 
@@ -13,40 +30,8 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
         android:layout_margin="@dimen/fab_margin"
-        app:srcCompat="@drawable/ic_action_add_24dp"
-        android:contentDescription="TODO" />
+        android:contentDescription="TODO"
+        app:srcCompat="@drawable/ic_action_add_24dp" />
 
 
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/iv_circluler_image"
-        android:layout_width="250dp"
-        android:layout_height="250dp"
-        android:layout_margin="16dp"
-        android:contentDescription="image"
-        android:src="@mipmap/ic_launcher"
-        app:civ_border_color="#FF000000"
-        app:civ_border_width="2dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/iv_simple_image"
-
-        />
-
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/iv_simple_image"
-        android:layout_width="250dp"
-        android:layout_height="250dp"
-        android:layout_margin="16dp"
-        android:contentDescription="image"
-        android:src="@mipmap/ic_launcher"
-        app:civ_border_color="#FF000000"
-        app:civ_border_width="2dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/iv_circle_image"
-
-
-        />
 </FrameLayout>
