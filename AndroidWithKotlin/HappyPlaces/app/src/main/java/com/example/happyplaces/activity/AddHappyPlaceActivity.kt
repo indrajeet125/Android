@@ -152,8 +152,7 @@ class AddHappyPlaceActivity : AppCompatActivity(), View.OnClickListener {
                         val dbHandler = DataBaseHandler(this)
                         val addHappyPlace = dbHandler.addHappyPlace(happyPlaceModel)
                         if (addHappyPlace > 0) {
-                            Toast.makeText(this, "data added to dataBase ", Toast.LENGTH_SHORT)
-                                .show()
+                            setResult(Activity.RESULT_OK)
                             finish()
                         }
                     }
@@ -179,7 +178,8 @@ class AddHappyPlaceActivity : AppCompatActivity(), View.OnClickListener {
                     Log.e("Saved Image", "path:: $saveImageToInternalStorage")
 
                 }
-            } else if (requestCode == CAMERA_CODE) {
+            }
+            else if (requestCode == CAMERA_CODE) {
                 var thumbNail: Bitmap = data!!.extras!!.get("data") as Bitmap
                 iv_place_image?.setImageBitmap(thumbNail)
 

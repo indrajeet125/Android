@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.happyplaces.R
+import com.example.happyplaces.activity.HappyPlaceDetailsActivity
 import com.example.happyplaces.models.HappyPlaceModel
 import de.hdodenhof.circleimageview.CircleImageView
 
@@ -15,6 +16,8 @@ open class HappyPlaceAdapter(
     private val context: Context,
     private var list: ArrayList<HappyPlaceModel>
 ) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+
+    private  var onClickListener:OnClickListener?=null
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
 
         return MyViewHolder(
@@ -34,7 +37,19 @@ open class HappyPlaceAdapter(
             holder.iv_place_image.setImageURI(Uri.parse(model.image))
             holder.tvTitle.text = model.title
             holder.tvDescription.text = model.description
+            holder.itemView.setOnClickListener(){
+                if(onClickListener!=null){
+                    onClickListener!!.onClick(position,model)
+                }
+            }
         }
+    }
+
+    interface OnClickListener {
+        fun onClick(position: Int, model: HappyPlaceModel)
+    }
+    fun setOnClickListener(onClickListener: OnClickListener){
+        this.onClickListener=onClickListener
     }
 
     private class MyViewHolder(view: View) : RecyclerView.ViewHolder(view) {
