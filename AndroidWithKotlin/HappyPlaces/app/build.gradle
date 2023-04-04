@@ -36,6 +36,7 @@ dependencies {
 
     implementation 'de.hdodenhof:circleimageview:3.1.0'
     implementation 'com.karumi:dexter:6.2.2'
+//    debugImplementation 'im.dino:dbinspector:3.4.1@aar'
 //    implementation "org.jetbrains.kotlin:kotlin-android-extensions:1.5.31"
     implementation 'androidx.core:core-ktx:1.7.0'
     implementation 'androidx.appcompat:appcompat:1.6.1'
