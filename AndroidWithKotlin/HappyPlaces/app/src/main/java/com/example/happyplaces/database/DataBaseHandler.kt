@@ -64,10 +64,30 @@ class DataBaseHandler(context: Context) : SQLiteOpenHelper(
         contentValues.put(KEY_LONGITUDE, happyplace.longitude)
 
         var result = db.insert(TABLE_HAPPY_PLACE, null, contentValues)
+        db.close()
         return result
     }
 
-    fun getHappyPlcesList(): ArrayList<HappyPlaceModel> {
+    fun updateHappyPlace(happyplace: HappyPlaceModel): Int {
+        val db = this.writableDatabase
+        val contentValues = ContentValues()
+
+        contentValues.put(KEY_TITLE, happyplace.title)
+        contentValues.put(KEY_IMAGE, happyplace.image)
+        contentValues.put(KEY_DESCRIPTION, happyplace.description)
+        contentValues.put(KEY_DATE, happyplace.date)
+        contentValues.put(KEY_LOCATION, happyplace.location)
+        contentValues.put(KEY_LATITUDE, happyplace.latitude)
+        contentValues.put(KEY_LONGITUDE, happyplace.longitude)
+
+        var success = db.update(TABLE_HAPPY_PLACE,
+            contentValues,
+            KEY_ID + "=" + happyplace.id,null)
+        db.close()
+        return success
+    }
+
+    fun getHappyPlacesList(): ArrayList<HappyPlaceModel> {
         val happyPlacesList = ArrayList<HappyPlaceModel>()
         val SELECTQUERY = "SELECT * FROM $TABLE_HAPPY_PLACE"
         val db = this.readableDatabase
@@ -85,7 +105,7 @@ class DataBaseHandler(context: Context) : SQLiteOpenHelper(
                         c.getString(c.getColumnIndexOrThrow(KEY_LOCATION)),
                         c.getDouble(c.getColumnIndexOrThrow(KEY_LATITUDE)),
                         c.getDouble(c.getColumnIndexOrThrow(KEY_LONGITUDE))
-                        )
+                    )
                     happyPlacesList.add(place)
                 } while (c.moveToNext())
             }
