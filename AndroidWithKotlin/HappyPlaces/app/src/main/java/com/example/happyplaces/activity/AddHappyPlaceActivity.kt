@@ -61,6 +61,7 @@ class AddHappyPlaceActivity : AppCompatActivity(), View.OnClickListener {
     private var mLatitude: Double = 0.0
     private var mLongitude: Double = 0.0
 
+    private var mHappyPlaceDetails: HappyPlaceModel? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -92,6 +93,27 @@ class AddHappyPlaceActivity : AppCompatActivity(), View.OnClickListener {
         }
 
         updateDateInView()
+
+        if (intent.hasExtra(MainActivity.EXTRA_PLACE_DETAILS)) {
+            mHappyPlaceDetails = intent.getParcelableExtra(MainActivity.EXTRA_PLACE_DETAILS)
+        }
+        if (mHappyPlaceDetails != null) {
+            supportActionBar?.title = "Edit Happy Place"
+            et_title?.setText(mHappyPlaceDetails!!.title)
+            et_description?.setText(mHappyPlaceDetails!!.description)
+            et_date?.setText(mHappyPlaceDetails!!.date)
+            et_location?.setText(mHappyPlaceDetails!!.location)
+            mLatitude = mHappyPlaceDetails!!.latitude
+            mLongitude = mHappyPlaceDetails!!.longitude
+
+
+            saveImageToInternalStorage = Uri.parse(
+                mHappyPlaceDetails!!.image
+            )
+            iv_place_image?.setImageURI(saveImageToInternalStorage)
+            btn_save.text = "UPDATE"
+
+        }
 
         et_date?.setOnClickListener(this)
         tv_add_image.setOnClickListener(this)
@@ -140,7 +162,7 @@ class AddHappyPlaceActivity : AppCompatActivity(), View.OnClickListener {
                     }
                     else -> {
                         val happyPlaceModel = HappyPlaceModel(
-                            0,
+                            if (mHappyPlaceDetails == null) 0 else mHappyPlaceDetails!!.id,
                             et_title?.text.toString(),
                             saveImageToInternalStorage.toString(),
                             et_description?.text.toString(),
@@ -150,7 +172,12 @@ class AddHappyPlaceActivity : AppCompatActivity(), View.OnClickListener {
                             mLongitude
                         )
                         val dbHandler = DataBaseHandler(this)
-                        val addHappyPlace = dbHandler.addHappyPlace(happyPlaceModel)
+                        var addHappyPlace: Long = 0
+                        if (mHappyPlaceDetails == null)
+                            addHappyPlace = dbHandler.addHappyPlace(happyPlaceModel)
+                        else
+                            addHappyPlace = dbHandler.updateHappyPlace(happyPlaceModel) as Long
+
                         if (addHappyPlace > 0) {
                             setResult(Activity.RESULT_OK)
                             finish()
@@ -178,8 +205,7 @@ class AddHappyPlaceActivity : AppCompatActivity(), View.OnClickListener {
                     Log.e("Saved Image", "path:: $saveImageToInternalStorage")
 
                 }
-            }
-            else if (requestCode == CAMERA_CODE) {
+            } else if (requestCode == CAMERA_CODE) {
                 var thumbNail: Bitmap = data!!.extras!!.get("data") as Bitmap
                 iv_place_image?.setImageBitmap(thumbNail)
 
