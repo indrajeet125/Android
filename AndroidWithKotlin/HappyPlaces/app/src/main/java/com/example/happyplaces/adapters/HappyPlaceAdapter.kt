@@ -13,6 +13,7 @@ import com.example.happyplaces.R
 import com.example.happyplaces.activity.AddHappyPlaceActivity
 import com.example.happyplaces.activity.HappyPlaceDetailsActivity
 import com.example.happyplaces.activity.MainActivity
+import com.example.happyplaces.database.DataBaseHandler
 import com.example.happyplaces.models.HappyPlaceModel
 import de.hdodenhof.circleimageview.CircleImageView
 
@@ -37,6 +38,17 @@ fun notifyEditItem(activity: Activity,position: Int,requestCode:Int){
 
     notifyItemChanged(position)
 }
+    fun RemoveAt(position: Int) {
+        val dbHandler=DataBaseHandler(context)
+        var isDeleted=dbHandler.deleteHappyPlace(list[position])
+        if(isDeleted>0){
+            list.removeAt(position)
+            notifyItemRemoved(position)
+        }
+
+
+
+    }
 
     override fun getItemCount(): Int {
         return list.size
